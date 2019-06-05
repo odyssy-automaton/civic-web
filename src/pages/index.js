@@ -21,7 +21,7 @@ class IndexPage extends React.Component {
     return (
   
     <Layout>
-      <div className="Block">
+      <div className="Hero Block">
         <div className="Contents">
           <h1>Civic Software Foundation</h1>
           <p>Welcome.</p>

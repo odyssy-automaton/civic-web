@@ -21,9 +21,37 @@ h1, h2, h3, h4, h5, h6 {
 
 p { font-family: $base-font; color:rgba(0,0,0,0.7); }
 
-// Links
+// Links & Buttons
 
 a { font-family: $base-font; color: $secondary; }
+
+button, .button {
+    // normalize
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    // style
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    // gradient
+    background-size: 200% auto;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    background-image: linear-gradient(to right, $secondary 0%, $tertiary 50%, $secondary 100%);
+    &:hover {
+        animation: animateButton 1s linear infinite;
+    }
+}
+
+@keyframes animateButton {
+    0% {
+		background-position: 0% center;
+	}
+	100% {
+		background-position: 200% center;
+	}
+  }
 
 // Blocks
 

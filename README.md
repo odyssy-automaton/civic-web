@@ -16,9 +16,10 @@
     https://yarnpkg.com/en/docs/install
     
     
-    Get Dependencies
+    Navigate into the site's directory and download dependencies
 
     ```sh
+    cd civic-web/
     yarn
     ```
 
@@ -26,10 +27,9 @@
 
 3.  **Start developing.**
 
-    Navigate into site’s directory and fire it up.
+    Fire it up.
 
     ```sh
-    cd civic-web/
     gatsby develop
     ```
 

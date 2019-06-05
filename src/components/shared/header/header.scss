@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+
+.Header {
+  background: $od-primary;
+  margin-bottom: '1.45rem',
+}
+
+.Header__title {
+  color: $od-green;
+}
+
+a.Header__title {
+  text-decoration: none;
+}

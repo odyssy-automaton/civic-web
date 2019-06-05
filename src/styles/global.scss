@@ -1,0 +1,65 @@
+@import 'variables';
+
+// Layout
+.Layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    @media (max-width: $grid) {
+        padding: 0px 25px;
+    }
+}
+
+// Typography
+
+body { font-family: $base-font; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $base-font;
+    color: $primary;
+    font-weight: 100;
+}
+
+p { font-family: $base-font; color:rgba(0,0,0,0.7); }
+
+// Links
+
+a { font-family: $base-font; color: $secondary; }
+
+// Blocks
+
+.Block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 75px 0px;
+    &__Contents {
+
+    }
+    p { font-size: 1.35em; line-height: 1.5em; }
+}
+
+// Grid
+
+.Grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__Column {
+        flex-direction: column;
+        &--33 {
+            flex-basis: calc(100% / 3);
+            @media (max-width: $grid) {
+                flex-basis: 100%; 
+            }
+        }
+        &--50 {
+            flex-basis: calc(100% / 2);
+        }
+    }
+    &__Row {
+        flex-direction: row; 
+        flex-basis: 100%;       
+    }
+}

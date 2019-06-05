@@ -3,11 +3,15 @@
 $base-font: 'Rubik', sans-serif;
 
 // Color Palette
-$od-primary: rgba(38,28,70,1);
-$od-yellow: rgba(244,230,89,1);
-$od-light-purple: rgba(93,63,152,1);
-$od-green: rgba(191,222,189,1);
+$primary: rgba(34,15,37,1);
+$secondary: rgba(237,73,91,1);
+$tertiary: rgba(23,182,169,1);
 
 //Media Queries
+$grid: 1200px;
 $tablet: 768px;
 $phone: 420px;
+
+body, p, h1, h2, h3, h4, h5, h6 {
+    font-family: $base-font;
+}

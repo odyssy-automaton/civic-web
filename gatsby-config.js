@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Odyssy Gatsby Starter',
+    title: 'Civic Software Foundation',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -10,8 +10,8 @@ module.exports = {
         name: 'Civic Software Foundation',
         short_name: 'Civic',
         start_url: '/',
-        background_color: '#f4e659',
-        theme_color: '#261c46',
+        background_color: '#fff',
+        theme_color: '#000',
         display: 'minimal-ui',
         icon: 'src/images/odyssy-icon.png',
       },

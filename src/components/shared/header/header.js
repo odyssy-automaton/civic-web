@@ -5,15 +5,16 @@ import './header.scss'
 
 const Header = ({ siteTitle }) => (
   <div className="Header">
-    <div
+    <div className="Header__Container"
       style={{
         margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
+        maxWidth: 1200,
+        padding: '0px',
+        height: '100px'
       }}
     >
       <h1 style={{ margin: 0 }}>
-        <Link className="Header__title" to="/">
+        <Link className="Header__Brand" to="/">
           {siteTitle}
         </Link>
       </h1>

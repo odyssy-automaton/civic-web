@@ -7,8 +7,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'odyssy',
-        short_name: 'odyssy',
+        name: 'Civic Software Foundation',
+        short_name: 'Civic',
         start_url: '/',
         background_color: '#f4e659',
         theme_color: '#261c46',

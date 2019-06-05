@@ -1,37 +1,35 @@
-#od-gatsby-starter
-
-## Features
-
-- Sass
-- TODO:
-  - Add web3
+#Civic Software Foundation
 
 ## Quick start
 
-1.  **Install the Gatsby CLI.**
+1.  **Clone the repo.**
 
-    The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
-
-    ```sh
-    # install the Gatsby CLI globally
-    npm install -g gatsby-cli
-    ```
-
-2.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+    Get a clone locally.
 
     ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-project https://github.com/odyssy-automaton/od-gatsby-starter
+    git clone https://github.com/odyssy-automaton/civic-web.git
     ```
+
+2.  **Get Dependencies.**
+
+    Yarn is used for package management. Install yarn globally if you haven't already.
+    https://yarnpkg.com/en/docs/install
+    
+    
+    Get Dependencies
+
+    ```sh
+    yarn
+    ```
+
+
 
 3.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into site’s directory and fire it up.
 
     ```sh
-    cd my-project/
+    cd civic-web/
     gatsby develop
     ```
 

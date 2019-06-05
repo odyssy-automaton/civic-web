@@ -13,7 +13,7 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#000',
         display: 'minimal-ui',
-        icon: 'src/images/odyssy-icon.png',
+        icon: 'src/images/civic-icon.png',
       },
     },
     'gatsby-plugin-offline',

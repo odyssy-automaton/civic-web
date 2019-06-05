@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Brand from '../../../images/civic-logo_standard-wide.png'
 
 import './header.scss'
 
@@ -13,11 +14,9 @@ const Header = ({ siteTitle }) => (
         height: '100px'
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link className="Header__Brand" to="/">
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link className="Header__Container--Brand" to="/">
+        <img src={Brand} alt="Civic Logo" />
+      </Link>
     </div>
   </div>
 )

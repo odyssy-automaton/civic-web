@@ -141,12 +141,24 @@
     background-color: $yellow;
     .Block__Contents {
         justify-content: flex-start;
+        .Grid__Column--50:nth-child(1){
+            padding-right: 150px;
+        }
+        .Grid__Column--50:nth-child(2){
+            padding-left: 50px;
+        }
     }
     p { color: rgba(0,0,0,0.5);}
 }
 
 .DemoDay {
+    max-width: 720px;
+    margin: 0 auto;
     position: relative;
+    button { margin: 50px 0px 100px; }
+}
+
+.Email {
 }
 
 .Footer {

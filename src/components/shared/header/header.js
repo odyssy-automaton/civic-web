@@ -1,21 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Brand from '../../../images/civic-logo_standard-wide.png'
+import Brand from '../../../images/civic-icon.png'
 
 import './header.scss'
 
 const Header = ({ siteTitle }) => (
   <div className="Header">
-    <div className="Header__Container"
-      style={{
-        margin: '0 auto',
-        maxWidth: 1200,
-        padding: '0px',
-        height: '100px'
-      }}
-    >
+    <div className="Header__Container">
       <Link className="Header__Container--Brand" to="/">
-        <img src={Brand} alt="Civic Logo" />
+        <img src={Brand} alt="Civic Logo" /><span className="BrandName">Civic Software Foundation</span>
       </Link>
     </div>
   </div>

@@ -1,0 +1,52 @@
+@import 'variables';
+
+.Hero {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    display: block;
+    &__Contents {
+        position: relative;
+        width: 100%;
+        .Text {
+            position: absolute;
+            width: 720px;
+            top: 50%;
+            transform: translateY(100%);
+            left: 100px;
+            z-index: 1;
+            .Circle {
+                z-index: -1;
+                top: 0px;
+                right: -100px;
+                width: 200px;
+                height: 200px;
+                mix-blend-mode: multiply;
+            }
+        }
+        .Image {
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+        }
+        .CTA {
+            position: absolute;
+        }
+    }
+}
+
+.Intro {
+    .Block__Contents {
+        max-width: 600px;
+    }
+}
+
+.Quote {
+    
+    .Block__Contents {
+        max-width: 600px;
+    }
+}

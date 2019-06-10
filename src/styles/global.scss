@@ -2,8 +2,6 @@
 
 // Layout
 .Layout {
-    max-width: 1200px;
-    margin: 0 auto;
     @media (max-width: $grid) {
         padding: 0px 25px;
     }
@@ -14,16 +12,24 @@
 body { font-family: $base-font; }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $base-font;
+    font-family: $heading-font;
     color: $primary;
-    font-weight: 100;
+    font-weight: 900;
 }
+
+h1 { font-size: 69px; }
+h2 { font-size: 69px; }
+h3 { font-size: 44px; }
+h4 { font-size: 32px; }
+h5 { font-size: 28px; }
+h6 { font-size: 21px; }
+
 
 p { font-family: $base-font; color:rgba(0,0,0,0.7); }
 
 // Links & Buttons
 
-a { font-family: $base-font; color: $secondary; }
+a { font-family: $heading-font; color: $secondary; }
 
 button, .button {
     // normalize
@@ -91,4 +97,19 @@ button, .button {
         flex-direction: row; 
         flex-basis: 100%;       
     }
+}
+
+// Utils
+
+.Contain {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Circle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $yellow;
+    position: absolute;
 }

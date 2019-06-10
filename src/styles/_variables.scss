@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:100,200,300,400,500,700,900');
+@import url("https://use.typekit.net/ncy1wfw.css");
 
 $base-font: 'Rubik', sans-serif;
+$heading-font: 'sofia-pro', sans-serif;
 
 // Color Palette
 $primary: rgba(34,15,37,1);
 $secondary: rgba(237,73,91,1);
 $tertiary: rgba(23,182,169,1);
+$yellow: rgba(255,219,88,1);
 
 //Media Queries
 $grid: 1200px;
 $tablet: 768px;
 $phone: 420px;
-
-body, p, h1, h2, h3, h4, h5, h6 {
-    font-family: $base-font;
-}

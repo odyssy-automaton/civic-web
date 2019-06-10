@@ -2,9 +2,7 @@
 
 // Layout
 .Layout {
-    @media (max-width: $grid) {
-        padding: 0px 25px;
-    }
+    position: relative;
 }
 
 // Typography
@@ -39,15 +37,35 @@ button, .button {
     background: none;
     outline: none;
     // style
-    color: white;
-    padding: 10px 30px;
-    border-radius: 10px;
-    // gradient
-    background-size: 200% auto;
-    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-    background-image: linear-gradient(to right, $secondary 0%, $tertiary 50%, $secondary 100%);
-    &:hover {
-        animation: animateButton 0.5s linear infinite;
+    color: $primary;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 900;
+    position: relative;
+    &:hover { cursor: pointer;}
+    &:after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $yellow;
+        display: block;
+        position: absolute;
+        right: -30px;
+        top: -12px;
+        z-index: -1;
+        transition: all .15s linear;
+    }
+    &:hover:after {
+        content: "";
+        scale: 1.5;
+        border-radius: 50%;
+        background-color: $yellow;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
     }
 }
 
@@ -104,6 +122,9 @@ button, .button {
 .Contain {
     max-width: 1200px;
     margin: 0 auto;
+    @media (max-width: $grid) {
+        padding: 0px 25px;
+    }
 }
 
 .Circle {

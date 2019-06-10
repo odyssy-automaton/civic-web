@@ -4,33 +4,62 @@
     width: 100%;
     position: relative;
     min-height: 100vh;
-    display: block;
+    margin-top: -120px;
+    height: auto;
+    padding: 0;
+    .Image {
+        position: absolute;
+        z-index: 0;
+        width: 75%;
+        height: 75%;
+        top: 0;
+        right:0;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.35;
+    }
     &__Contents {
         position: relative;
         width: 100%;
-        .Text {
+        height: 100%;
+        .Text--A {
             position: absolute;
             width: 720px;
             top: 50%;
-            transform: translateY(100%);
+            transform: translate(25%, 25%);
             left: 100px;
             z-index: 1;
+            @media (max-width: $grid){
+                top: 50px;
+                left: 50px;
+                transform: none;
+                max-width: 100%;
+                h2 {font-size: 28px;}
+            }
             .Circle {
                 z-index: -1;
                 top: 0px;
                 right: -100px;
                 width: 200px;
                 height: 200px;
+                opacity: .9;
                 mix-blend-mode: multiply;
             }
         }
-        .Image {
-            position: absolute;
-            z-index: 0;
-            top: 50%;
-            left: 50%;
-            height: 100%;
-            transform: translate(-50%, -50%);
+        .Text--B {
+            position: relative;
+            max-width: 420px;
+            top: 10%;
+            left: 10%;
+            transform: translate(50%, 25%);
+            @media (max-width: $grid){
+                top: 0px;
+                left: 0px;
+                transform: none;
+                max-width: 100%;
+                p {font-size: 21px;}
+            }
         }
         .CTA {
             position: absolute;
@@ -39,14 +68,89 @@
 }
 
 .Intro {
+    padding: 75px 0px;
     .Block__Contents {
         max-width: 600px;
     }
 }
 
 .Quote {
-    
+    margin: 125px 0px 125px;
     .Block__Contents {
-        max-width: 600px;
+        max-width: 900px;
+        font-size: 28px;
+        h3 {
+            position: relative;
+            &:before {
+                content: open-quote;
+                display: block;
+                position: absolute;
+                top: -0px;
+                left: -25px;
+                font-family: 'sofia-pro', sans-serif;
+                font-weight: 900;
+                font-size: 42px;
+                color: #ccc;
+            }
+            &:after {
+                content: close-quote;
+                display: block;
+                position: absolute;
+                bottom: -0px;
+                right: -0px;
+                font-family: 'sofia-pro', sans-serif;
+                font-weight: 900;
+                font-size: 42px;
+                color: #ccc;
+            }
+        }
+        .Attribution {
+            font-size: .75em;
+            font-style: italic;
+            color: #ccc;
+        }
     }
+}
+
+.Volunteers {
+    margin: 75px 0px;
+    img {
+        margin-top: -100px;
+        padding-right: 50px;
+    }
+    .Text {
+        padding-left: 50px;
+        margin-top: 100px;
+    }
+}
+
+.Cities {
+    margin: 125px 0px;
+    img {
+        margin-top: 100px;
+        padding-left: 50px;
+    }
+    .Text {
+        padding-right: 50px;
+        margin-top: -50px;
+    }
+}
+
+.CivicMethod {
+    padding: 250px 25px;
+    background-color: $yellow;
+    .Block__Contents {
+        justify-content: flex-start;
+    }
+    p { color: rgba(0,0,0,0.5);}
+}
+
+.DemoDay {
+    position: relative;
+}
+
+.Footer {
+    position: relative;
+    background-color: $primary;
+    h6 { color: $tertiary; }
 }

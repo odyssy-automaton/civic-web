@@ -45,6 +45,7 @@ button, .button {
     &:hover { cursor: pointer;}
     &:after {
         content: "";
+        text-align: center;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -58,13 +59,14 @@ button, .button {
     }
     &:hover:after {
         content: "";
+        text-align: center;
         scale: 1.5;
         border-radius: 50%;
         background-color: $yellow;
         display: block;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: -30px;
+        top: -12px;
         z-index: -1;
     }
 }

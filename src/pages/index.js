@@ -81,7 +81,7 @@ class IndexPage extends React.Component {
       <div className="DemoDay Block">
         <div className="Block__Contents Contain">
           <h2>See the action live on Demo Day</h2>
-          <p>This year’s CIVIC team has been working for six months to debut a set of exciting new projects.Join us for a live demo, product launch, and annual celebration August 29th in Portland, Oregon.</p>
+          <p>This year’s CIVIC team has been working for six months to debut a set of exciting new projects. Join us for a live demo, product launch, and annual celebration August 29th in Portland, Oregon.</p>
           <p><strong>Tickets are free, but sell out fast!</strong></p>
           <Link className="button" to="#signup">Be the first to know</Link>
           <h4>Here’s a sneak peek inside the sprint toward to Demo Day.</h4>

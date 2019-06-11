@@ -29,20 +29,21 @@ p { font-family: $base-font; color:rgba(0,0,0,0.7); }
 
 a { font-family: $heading-font; color: $secondary; }
 
-button, .button {
+button, a.button {
     // normalize
     appearance: none;
     -webkit-appearance: none;
     border: none;
     background: none;
     outline: none;
+    text-decoration: none;
     // style
     color: $primary;
     padding: 0px;
     margin: 0px;
     font-weight: 900;
     position: relative;
-    &:hover { cursor: pointer;}
+    &:hover { cursor: pointer; pointer-events: all;}
     &:after {
         content: "";
         text-align: center;
@@ -56,6 +57,7 @@ button, .button {
         top: -12px;
         z-index: -1;
         transition: all .15s linear;
+        pointer-events: all;
     }
     &:hover:after {
         content: "";
@@ -68,6 +70,7 @@ button, .button {
         right: -30px;
         top: -12px;
         z-index: -1;
+        pointer-events: all;
     }
 }
 
@@ -111,6 +114,9 @@ button, .button {
         }
         &--50 {
             flex-basis: calc(100% / 2);
+            @media (max-width: $grid) {
+                flex-basis: 100%; 
+            }
         }
     }
     &__Row {

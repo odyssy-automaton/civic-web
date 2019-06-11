@@ -14,8 +14,14 @@ import '../styles/global.scss';
 import '../styles/home.scss';
 
 class IndexPage extends React.Component {
-  state = {
-    open: false
+
+  constructor(props) {
+    super(props);
+    this.openForm = this.openForm.bind(this);
+  }
+
+  openForm() {
+    this.typeformEmbed.typeform.open();
   }
 
   render () {

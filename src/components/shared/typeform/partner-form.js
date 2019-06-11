@@ -14,6 +14,9 @@ class VolunteerForm extends React.Component {
   render() {
     return (
       <div className="Typeform">
+        <button className="button" onClick={this.openForm} style={{ cursor: 'pointer' }}>
+          Partner with us
+        </button>
         <ReactTypeformEmbed
           popup
           autoOpen={false}
@@ -21,14 +24,11 @@ class VolunteerForm extends React.Component {
           hideHeaders
           hideFooter
           buttonText="Submit!"
-          style={{ top: 100 }}
+          style={{height: '0%'}}
           ref={tf => {
             this.typeformEmbed = tf;
           }}
         />
-        <button className="button" onClick={this.openForm} style={{ cursor: 'pointer' }}>
-          Partner with us
-        </button>
       </div>
     );
   }

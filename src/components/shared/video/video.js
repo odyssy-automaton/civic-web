@@ -6,13 +6,13 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
       <iframe
         src={videoSrcURL}
         title={videoTitle}
-        allow="autoplay;"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         frameBorder="0"
         webkitallowfullscreen="true"
         mozallowfullscreen="true"
         allowFullScreen
-        width="100%"
-        height="auto"
+        width="560"
+        height="315"
       />
     </div>
   )

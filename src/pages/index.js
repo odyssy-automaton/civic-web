@@ -6,7 +6,8 @@ import Video from "../components/shared/video/video"
 import dataFlower from '../images/hero__test--data-flower.png'
 import humanGrid1 from '../images/human-grid-test.png'
 import humanGrid2 from '../images/human-grid-test2.png'
-import { ReactTypeformEmbed } from 'react-typeform-embed'
+import VolunteerForm from '../components/shared/typeform/volunteer-form'
+import PartnerForm from '../components/shared/typeform/partner-form'
 
 
 import '../styles/global.scss';
@@ -14,24 +15,7 @@ import '../styles/home.scss';
 
 class IndexPage extends React.Component {
   state = {
-    open: false,
-    formUrl: 'https://ven386248.typeform.com/to/rEhanV'
-  }
-
-  openForm = () => {
-    this.typeformEmbed.typeform.open();
-  }
-
-  openVolunteerForm = () => {
-    this.setState({
-      formUrl: 'https://ven386248.typeform.com/to/rEhanV'
-    })
-  }
-
-  openPartnerForm = () => {
-    this.setState({
-      formUrl: 'https://ven386248.typeform.com/to/WVYtVF'
-    })
+    open: false
   }
 
   render () {
@@ -69,14 +53,7 @@ class IndexPage extends React.Component {
             <div className="Grid__Column--50 Text">
               <h3>Be the public imagination</h3>
               <p>From designers, to developers, to data scientists and beyond—we’re building a talented, cross-disciplinary team of nationwide collaborators intent on re-imagining the state of information in the United States.</p>
-              <button className="button" onClick={(event) => { this.openVolunteerForm(); this.openForm();}}>Build with us</button>
-              <ReactTypeformEmbed
-                  url={this.state.formUrl}
-                  popup={true}
-                  autoOpen={false}
-                  style={{height: '0%'}}
-                  ref={(tf => this.typeformEmbed = tf) }
-              />
+              <VolunteerForm />
             </div>
           </div>
         </div>
@@ -87,7 +64,7 @@ class IndexPage extends React.Component {
           <div className="Grid__Column--50 Text">
               <h3>Be the political will</h3>
               <p>With data and the ability to put it to work, we’re looking for cities with opportunities that better information can help overcome.</p>
-              <button className="button" onClick={(event) => { this.openPartnerForm(); this.openForm();}}>Partner with us</button>
+              <PartnerForm />
             </div>
             <div className="Grid__Column--50">
               <p><img src={humanGrid2} alt="civic humans" /></p>

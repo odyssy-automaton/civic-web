@@ -17,7 +17,7 @@ class VolunteerForm extends React.Component {
         <ReactTypeformEmbed
           popup
           autoOpen={false}
-          url="https://demo.typeform.com/to/rEhanV"
+          url="https://demo.typeform.com/to/WVYtVF"
           hideHeaders
           hideFooter
           buttonText="Submit!"
@@ -27,7 +27,7 @@ class VolunteerForm extends React.Component {
           }}
         />
         <button className="button" onClick={this.openForm} style={{ cursor: 'pointer' }}>
-          Build with us
+          Partner with us
         </button>
       </div>
     );

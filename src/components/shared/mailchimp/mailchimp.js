@@ -10,7 +10,7 @@ class Mailchimp extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(this.form);
-    addToMailchimp(formData.get('email')).then((result) => {
+    addToMailchimp(formData.get('EMAIL', 'FNAME', 'LNAME')).then((result) => {
       const newState = { resultMessage: result.msg.split('<a')[0] }
       this.setState({
         resultMessage: result.msg.split('<a')[0],
@@ -25,7 +25,9 @@ class Mailchimp extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit} name="emailForm" ref={(el) => this.form = el} autoComplete="off">
-        <input type="text" name="email" placeholder="email address" />
+        <input type="text" name="FNAME" placeholder="First Name" />
+        <input type="text" name="LNAME" placeholder="Last Name" />
+        <input type="text" name="EMAIL" placeholder="Email Address" />
         <button type="submit">Sign up</button>
         <div>
           <p className={resultMessage}>{this.state.resultMessage}</p>

@@ -25,7 +25,12 @@
         @media (max-width: $grid){
             background-size: cover;
             width: 100%;
-            height: 50%;
+            height: 100%;
+        }
+        @media (max-width: $tablet){
+            background-size: cover;
+            width: 100%;
+            height: 75%;
         }
     }
     &__Contents {
@@ -44,6 +49,7 @@
                 left: 50px;
                 transform: none;
                 max-width: 340px;
+                h5 { font-size: 21px; }
                 h2 {font-size: 32px; margin-bottom: 50px;}
             }
             .Circle {
@@ -54,6 +60,13 @@
                 height: 200px;
                 opacity: .9;
                 mix-blend-mode: multiply;
+                overflow: hidden;
+                @media (max-width: $grid) {
+                    right: 0px;
+                    top: 0px;
+                    width: 120px;
+                    height: 120px;
+                }
             }
         }
         .Text--B {
@@ -101,6 +114,9 @@
         font-size: 28px;
         h3 {
             position: relative;
+            @media (max-width: $tablet) {
+                font-size: 32px;
+            }
             &:before {
                 content: open-quote;
                 display: block;
@@ -194,6 +210,7 @@
         @media (max-width: $grid){
             margin: 0;
             margin-bottom: 25px;
+            font-size: 36px;
         }
     }
     h4 { 
@@ -207,6 +224,9 @@
 }
 
 .Email {
+    @media (max-width: $tablet) {
+        h2 { font-size: 36px; }
+    }
 }
 
 .Footer {

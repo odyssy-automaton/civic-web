@@ -10,8 +10,14 @@ class Mailchimp extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(this.form);
-    addToMailchimp(formData.get('EMAIL', 'FNAME', 'LNAME')).then((result) => {
-      const newState = { resultMessage: result.msg.split('<a')[0] }
+    const email = formData.get('EMAIL')
+    const fields = {
+        FNAME: formData.get('FNAME'),
+        LNAME: formData.get('LNAME'),
+    }
+    console.log(email);
+    console.log(fields);
+    addToMailchimp(email, fields).then((result) => {
       this.setState({
         resultMessage: result.msg.split('<a')[0],
         error: result.result === 'error',
@@ -29,7 +35,7 @@ class Mailchimp extends React.Component {
         <input type="text" name="LNAME" placeholder="Last Name" />
         <input type="text" name="EMAIL" placeholder="Email Address" />
         <button type="submit">Sign up</button>
-        <div>
+        <div className="Result">
           <p className={resultMessage}>{this.state.resultMessage}</p>
         </div>
       </form>

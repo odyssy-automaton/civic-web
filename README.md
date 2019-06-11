@@ -1,5 +1,7 @@
 # Civic Software Foundation
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/80eb5d7c-547d-40b8-a7fb-05908c9b65db/deploy-status)](https://app.netlify.com/sites/happy-bartik-c2a2c6/deploys)
+
 ## Quick start
 
 1.  **Clone the repo.**

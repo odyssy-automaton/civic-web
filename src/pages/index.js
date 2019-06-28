@@ -86,8 +86,8 @@ class IndexPage extends React.Component {
           <Link className="button" to="#signup">Be the first to know</Link>
           <h4>Here’s a sneak peek inside the sprint toward to Demo Day.</h4>
           <Video
-            videoSrcURL="https://www.youtube.com/embed/hJUyQK_cOQI"
-            videoTitle="Official Music Video on YouTube"
+            videoSrcURL="https://www.youtube.com/embed/LpWqIdM6cQo"
+            videoTitle="Demo Day Hype!"
           />
         </div>
       </div>

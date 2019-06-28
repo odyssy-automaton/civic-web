@@ -84,7 +84,7 @@ class IndexPage extends React.Component {
           <p>This year’s CIVIC team has been working for six months to debut a set of exciting new projects. Join us for a live demo, product launch, and annual celebration August 29th in Portland, Oregon.</p>
           <p><strong>Tickets are free, but sell out fast!</strong></p>
           <Link className="button" to="#signup">Be the first to know</Link>
-          <h4>Here’s a sneak peek inside the sprint toward to Demo Day.</h4>
+          <h4>Here’s a sneak peek inside the sprint towards Demo Day.</h4>
           <Video
             videoSrcURL="https://www.youtube.com/embed/LpWqIdM6cQo"
             videoTitle="Demo Day Hype!"

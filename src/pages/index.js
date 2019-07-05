@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Mailchimp from '../components/shared/mailchimp/mailchimp'
 import Video from "../components/shared/video/video"
-import dataFlower from '../images/hero__test--data-flower.png'
+import dataFlower from '../images/hero__data-flower-venn-circle.png'
 import humanGrid1 from '../images/human-grid-test.png'
 import humanGrid2 from '../images/human-grid-test2.png'
 import VolunteerForm from '../components/shared/typeform/volunteer-form'
@@ -33,8 +33,8 @@ class IndexPage extends React.Component {
         <div className="Hero__Contents">
           <div className="Text--A">
             <div className="Circle"></div>
-            <h5>Our Civic Duty</h5>
-            <h2>Let's transform public information into public knowledge.</h2>
+            <h5>The Civic Method</h5>
+            <h2>We bring a perfect blend of data science, modern tech, and civic willpower together into a force for public good.</h2>
             <div className="Text--B">
               <p>Cities have some of the world’s most valuable data. The problem? It’s raw, nearly indecipherable, and hardly utilized. But, it’s our data. The CIVIC Method is built on the belief that cities can become the leaders of the next generation of innovators.</p> 
               <p><strong>We’re building the teams and systems that make it happen.</strong></p>
@@ -69,7 +69,7 @@ class IndexPage extends React.Component {
           <div className="Grid">
           <div className="Grid__Column--50 Text">
               <h3>Be the political will</h3>
-              <p>With data and the ability to put it to work, we’re looking for cities with opportunities that better information can help overcome.</p>
+              <p>Unencumbered by corporate bloat, our collaborative model is optimized for agility and efficiency. We’re looking for results-focused cities with complex, population-level problems who believe in the power of tech and want to put it to work for them. If that sounds like you, we want to hear from you.</p>
               <PartnerForm />
             </div>
             <div className="Grid__Column--50">

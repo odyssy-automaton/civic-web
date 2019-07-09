@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
           <div className="Text--A">
             <div className="Circle"></div>
             <h5>The Civic Method</h5>
-            <h2>We bring a perfect blend of data science, modern tech, and civic willpower together into a force for public good.</h2>
+            <h2>We bring data science, modern tech, and civic willpower together to create a force for public good.</h2>
             <div className="Text--B">
               <p>Cities have some of the world’s most valuable data. The problem? It’s raw, nearly indecipherable, and hardly utilized. But, it’s our data. The CIVIC Method is built on the belief that cities can become the leaders of the next generation of innovators.</p> 
               <p><strong>We’re building the teams and systems that make it happen.</strong></p>
@@ -58,7 +58,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="Grid__Column--50 Text">
               <h3>Be the public imagination</h3>
-              <p>From designers, to developers, to data scientists and beyond—we’re building a talented, cross-disciplinary team of nationwide collaborators intent on re-imagining the state of information in the United States.</p>
+              <p>From designers, to developers, to data scientists and beyond—we’re building talented, cross-disciplinary teams of nationwide collaborators intent on re-imagining the state of information in the United States.</p>
               <VolunteerForm />
             </div>
           </div>
@@ -69,7 +69,7 @@ class IndexPage extends React.Component {
           <div className="Grid">
           <div className="Grid__Column--50 Text">
               <h3>Be the political will</h3>
-              <p>Unencumbered by corporate bloat, our collaborative model is optimized for agility and efficiency. We’re looking for results-focused cities with complex, population-level problems who believe in the power of tech and want to put it to work for them. If that sounds like you, we want to hear from you.</p>
+              <p>Our collaborative model is optimized for agility, rapid procurement, and results. We’re looking for cities with complex problems who want to put tech to work for them.</p>
               <PartnerForm />
             </div>
             <div className="Grid__Column--50">
@@ -81,13 +81,13 @@ class IndexPage extends React.Component {
       <div className="DemoDay Block">
         <div className="Block__Contents Contain">
           <h2>See the action live on Demo Day</h2>
-          <p>This year’s CIVIC team has been working for six months to debut a set of exciting new projects. Join us for a live demo, product launch, and annual celebration August 29th in Portland, Oregon.</p>
+          <p>CIVIC team is working to debut a set of exciting new projects. Join us for a live demo, product launch, and annual celebration September 11th in Portland, Oregon.</p>
           <p><strong>Tickets are free, but sell out fast!</strong></p>
           <Link className="button" to="#signup">Be the first to know</Link>
-          <h4>Here’s a sneak peek inside the sprint toward to Demo Day.</h4>
+          <h4>Here’s a sneak peek inside the sprint toward Demo Day.</h4>
           <Video
-            videoSrcURL="https://www.youtube.com/embed/hJUyQK_cOQI"
-            videoTitle="Official Music Video on YouTube"
+            videoSrcURL="https://www.youtube.com/embed/LpWqIdM6cQo"
+            videoTitle="2019 Civic Demo Day Hype"
           />
         </div>
       </div>

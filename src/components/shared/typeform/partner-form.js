@@ -15,7 +15,7 @@ class VolunteerForm extends React.Component {
     return (
       <div className="Typeform">
         <button className="button" onClick={this.openForm} style={{ cursor: 'pointer' }}>
-          Partner with us
+          Let's get to work
         </button>
         <ReactTypeformEmbed
           popup

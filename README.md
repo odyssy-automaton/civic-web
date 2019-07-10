@@ -14,7 +14,9 @@
 
 2.  **Get Dependencies.**
 
-    Yarn is used for package management. Install yarn globally if you haven't already.
+    Yarn is recommended for package management, though feel free to use npm if preferred. 
+    
+    Install yarn globally if you haven't already.
     https://yarnpkg.com/en/docs/install
     
     

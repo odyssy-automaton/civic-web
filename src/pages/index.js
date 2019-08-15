@@ -120,7 +120,7 @@ class IndexPage extends React.Component {
             <h2>See the action live on Demo Day</h2>
             <p>
               CIVIC teams are working to debut a set of exciting new
-              projects on themes of elections, disaster, education, housing,
+              projects on these themes: elections, disaster, education, housing,
               transportation, and sandbox.
             </p>
             <p>
@@ -139,7 +139,7 @@ class IndexPage extends React.Component {
             <TicketsForm/>
             <Logos/>
             <h4>Here’s a sneak peek inside the sprint toward Demo Day.</h4>
-            <Video videoSrcURL="https://www.youtube.com/embed/LpWqIdM6cQo" videoTitle="2019 Civic Demo Day Hype" />
+            <Video videoSrcURL="https://www.youtube.com/embed/2-czlCAceZo" videoTitle="2019 Civic Demo Day Hype" />
           </div>
         </div>
         <div className="Email Block" id="signup">

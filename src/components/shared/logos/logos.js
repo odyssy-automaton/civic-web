@@ -56,6 +56,9 @@ export default () => {
   `)
   return (
     <div className="LogosContainer">
+      <p className="LogosThankYouText">
+        <strong>Thank you to our partners!</strong>
+      </p>
       <div className="Logos">
         <NonStretchedImg fluid={data.gates.childImageSharp.fluid} />
         <NonStretchedImg fluid={data.county.childImageSharp.fluid} />
@@ -64,9 +67,6 @@ export default () => {
         <NonStretchedImg fluid={data.ocf.childImageSharp.fluid} />
         <NonStretchedImg fluid={data.omsi.childImageSharp.fluid} />
       </div>
-      <p className="LogosThankYouText">
-        <strong>Thank you to our partners!</strong>
-      </p>
     </div>
   )
 }

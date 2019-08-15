@@ -1,0 +1,16 @@
+.Logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  div {
+    width: 100%;
+  }
+}
+
+.LogosContainer {
+  margin: 60px 0;
+}
+
+.LogosThankYouText {
+  margin: 20px 0;
+}

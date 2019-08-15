@@ -17,10 +17,20 @@ module.exports = {
       },
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-          endpoint: 'https://hackoregon.us3.list-manage.com/subscribe/post?u=6bed8811c700af6cf48dfe893&amp;id=b11a78686d', // add your MC list endpoint here; see instructions below
+        endpoint:
+          'https://hackoregon.us3.list-manage.com/subscribe/post?u=6bed8811c700af6cf48dfe893&amp;id=b11a78686d', // add your MC list endpoint here; see instructions below
       },
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-sass',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
 }

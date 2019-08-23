@@ -36,7 +36,15 @@ button, a.button {
     border: none;
     background: none;
     outline: none;
-    text-decoration: underline dotted;    
+    text-decoration: none;
+
+    // underline
+    background-image: linear-gradient(to right, #220f25 50%, transparent 50%);
+    background-position: 0 1.2em;
+    background-repeat: repeat-x;
+    background-size: 6px 3px;
+
+    
     // style
     color: $primary;
     padding: 0px;

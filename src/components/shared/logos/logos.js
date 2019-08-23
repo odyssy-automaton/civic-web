@@ -52,6 +52,9 @@ export default () => {
       gates: file(relativePath: { eq: "logos/gates.png" }) {
         ...squareImage
       }
+      att: file(relativePath: { eq: "logos/att.jpg" }) {
+        ...squareImage
+      }
     }
   `)
   return (
@@ -66,6 +69,7 @@ export default () => {
         <NonStretchedImg fluid={data.moovel.childImageSharp.fluid} />
         <NonStretchedImg fluid={data.ocf.childImageSharp.fluid} />
         <NonStretchedImg fluid={data.omsi.childImageSharp.fluid} />
+        <NonStretchedImg fluid={data.att.childImageSharp.fluid} />
       </div>
     </div>
   )

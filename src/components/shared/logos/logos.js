@@ -31,7 +31,7 @@ export const squareImage = graphql`
   }
 `
 
-export default () => {
+export default ({ showTitle = true }) => {
   const data = useStaticQuery(graphql`
     query ImageQuery {
       moovel: file(relativePath: { eq: "logos/moovel.png" }) {
@@ -59,9 +59,11 @@ export default () => {
   `)
   return (
     <div className="LogosContainer">
-      <p className="LogosThankYouText">
-        <strong>Thank you to our partners!</strong>
-      </p>
+      {showTitle && (
+        <p className="LogosThankYouText">
+          <strong>Thank you to our partners!</strong>
+        </p>
+      )}
       <div className="Logos">
         <NonStretchedImg fluid={data.gates.childImageSharp.fluid} />
         <NonStretchedImg fluid={data.county.childImageSharp.fluid} />

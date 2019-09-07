@@ -55,6 +55,9 @@ export default ({ showTitle = true }) => {
       att: file(relativePath: { eq: "logos/att.jpg" }) {
         ...squareImage
       }
+      mapbox: file(relativePath: { eq: "logos/mapbox.png" }) {
+        ...squareImage
+      }
     }
   `)
   return (
@@ -72,6 +75,7 @@ export default ({ showTitle = true }) => {
         <NonStretchedImg fluid={data.ocf.childImageSharp.fluid} />
         <NonStretchedImg fluid={data.omsi.childImageSharp.fluid} />
         <NonStretchedImg fluid={data.att.childImageSharp.fluid} />
+        <NonStretchedImg fluid={data.mapbox.childImageSharp.fluid} />
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Mailchimp from '../components/shared/mailchimp/mailchimp'
-import Video from "../components/shared/video/video"
+import Video from '../components/shared/video/video'
 import Logos from '../components/shared/logos/logos'
 import dataFlower from '../images/hero__data-flower-venn-circle.png'
 import humanGrid1 from '../images/human-grid-test.png'
@@ -11,44 +11,49 @@ import VolunteerForm from '../components/shared/typeform/volunteer-form'
 import PartnerForm from '../components/shared/typeform/partner-form'
 import TicketsForm from '../components/shared/typeform/tickets-form'
 
-import '../styles/global.scss';
-import '../styles/home.scss';
+import '../styles/global.scss'
+import '../styles/home.scss'
 
 class IndexPage extends React.Component {
-
   constructor(props) {
-    super(props);
-    this.openForm = this.openForm.bind(this);
+    super(props)
+    this.openForm = this.openForm.bind(this)
   }
 
   openForm() {
-    this.typeformEmbed.typeform.open();
+    this.typeformEmbed.typeform.open()
   }
 
-  render () {
-    return <Layout>
+  render() {
+    return (
+      <Layout>
         <div className="Hero">
-          <div className="Image" style={{ backgroundImage: 'url(' + dataFlower + ')', backgroundColor: '#fff' }} />
+          <div
+            className="Image"
+            style={{
+              backgroundImage: 'url(' + dataFlower + ')',
+              backgroundColor: '#fff',
+            }}
+          />
           <div className="Hero__Contents">
             <div className="Text--A">
               <div className="Circle" />
               <h5>The Civic Method</h5>
               <h2>
-                We bring data science, modern tech, and civic willpower
-                together to create a force for public good.
+                We bring data science, modern tech, and civic willpower together
+                to create a force for public good.
               </h2>
               <div className="Text--B">
                 <p>
                   Cities have some of the world’s most valuable data. The
-                  problem? It’s raw, nearly indecipherable, and hardly
-                  utilized. But, it’s our data. The CIVIC Method is built on
-                  the belief that cities can become the leaders of the next
-                  generation of innovators.
+                  problem? It’s raw, nearly indecipherable, and hardly utilized.
+                  But, it’s our data. The CIVIC Method is built on the belief
+                  that cities can become the leaders of the next generation of
+                  innovators.
                 </p>
                 <p>
                   <strong>
-                    We’re building the teams and systems that make it
-                    happen.
+                    We’re building the teams and systems that make it happen.
                   </strong>
                 </p>
                 <div className="CTA--A">
@@ -68,8 +73,8 @@ class IndexPage extends React.Component {
         <div className="Quote Block">
           <div className="Block__Contents Contain">
             <h3>
-              When political will meets public imagination, the technology
-              we can create is unlike anything the world has ever seen.
+              When political will meets public imagination, the technology we
+              can create is unlike anything the world has ever seen.
             </h3>
             <p className="Attribution">-Cat Nikolovski, Founder of CIVIC</p>
           </div>
@@ -86,9 +91,9 @@ class IndexPage extends React.Component {
                 <h3>Be the public imagination</h3>
                 <p>
                   From designers, to developers, to data scientists and
-                  beyond—we’re building talented, cross-disciplinary teams
-                  of nationwide collaborators intent on re-imagining the
-                  state of information in the United States.
+                  beyond—we’re building talented, cross-disciplinary teams of
+                  nationwide collaborators intent on re-imagining the state of
+                  information in the United States.
                 </p>
                 <VolunteerForm />
               </div>
@@ -119,14 +124,13 @@ class IndexPage extends React.Component {
           <div className="Block__Contents Contain">
             <h2>See the action live on Demo Day</h2>
             <p>
-              CIVIC teams are working to debut a set of exciting new
-              projects on these themes: elections, disaster, education, housing,
+              CIVIC teams are working to debut a set of exciting new projects on
+              these themes: elections, disaster, education, housing,
               transportation, and sandbox.
             </p>
             <p>
-              Join us for a live demo, product launch, and annual
-              celebration September 11th in Portland, Oregon, at Revolution
-              Hall.
+              Join us for a live demo, product launch, and annual celebration
+              September 11th in Portland, Oregon, at Revolution Hall.
             </p>
             <ul>
               <li>5:30 PM: Doors</li>
@@ -136,10 +140,13 @@ class IndexPage extends React.Component {
             <p>
               <strong>Tickets are free, but sell out fast!</strong>
             </p>
-            <TicketsForm/>
-            <Logos/>
+            <TicketsForm />
+            <Logos />
             <h4>Here’s a sneak peek inside the sprint toward Demo Day.</h4>
-            <Video videoSrcURL="https://www.youtube.com/embed/2-czlCAceZo" videoTitle="2019 Civic Demo Day Hype" />
+            <Video
+              videoSrcURL="https://www.youtube.com/embed/2-czlCAceZo"
+              videoTitle="2019 Civic Demo Day Hype"
+            />
           </div>
         </div>
         <div className="Email Block" id="signup">
@@ -149,12 +156,44 @@ class IndexPage extends React.Component {
             <Mailchimp />
           </div>
         </div>
+        <div className="Content" id="contact">
+          <div className="Block__Contents Contain">
+            <div className="Grid">
+              <div className="Grid__Column--50 Text">
+                <h3>Contact</h3>
+                <a href="mailto:hi@civicsoftwarefoundation.org">
+                  hi@civicsoftwarefoundation.org
+                </a>
+                <br />
+                <br />
+                <h5>Creative and Tech HQ</h5>
+                <ul className="List">
+                  <li>Portland, OR</li>
+                  <li>
+                    <a href="tel:5033839131">+1-503-383-9131‬</a>
+                  </li>
+                </ul>
+                <div>
+                  <h5>Business HQ</h5>
+                  <ul className="List">
+                    <li>Washington, DC</li>
+                    <li>
+                      <a href="tel:12026641223">+1-202-664-1223</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="Grid__Column--50 Text"></div>
+            </div>
+          </div>
+        </div>
         <div className="Footer Block">
           <div className="Block__Contents Contain">
             <h6>© 2019 Civic Software Foundation.</h6>
           </div>
         </div>
       </Layout>
+    )
   }
 }
 

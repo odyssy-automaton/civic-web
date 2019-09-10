@@ -236,8 +236,38 @@
     }
 }
 
+.Contact {
+    margin: 75px 0px;
+    @media (max-width: $grid){
+        margin: 0px;
+    }
+    img {
+        margin-top: -100px;
+        padding-right: 50px;
+        @media (max-width: $grid){
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    ul {
+        list-style-type: none;
+    }
+    .Text {
+        padding-left: 50px;
+        margin-top: 100px;
+        @media (max-width: $grid){
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+}
+
 .Footer {
     position: relative;
     background-color: $primary;
     h6 { color: $tertiary; }
+}
+
+.List {
+    list-style-type: none;
 }

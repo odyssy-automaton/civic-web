@@ -68,14 +68,32 @@ export default ({ showTitle = true }) => {
         </p>
       )}
       <div className="Logos">
-        <NonStretchedImg fluid={data.gates.childImageSharp.fluid} />
-        <NonStretchedImg fluid={data.county.childImageSharp.fluid} />
-        <NonStretchedImg fluid={data.city.childImageSharp.fluid} />
-        <NonStretchedImg fluid={data.moovel.childImageSharp.fluid} />
-        <NonStretchedImg fluid={data.ocf.childImageSharp.fluid} />
-        <NonStretchedImg fluid={data.omsi.childImageSharp.fluid} />
-        <NonStretchedImg fluid={data.att.childImageSharp.fluid} />
-        <NonStretchedImg fluid={data.mapbox.childImageSharp.fluid} />
+        <NonStretchedImg
+          fluid={data.gates.childImageSharp.fluid}
+          alt={'Bill & Melinda Gates Foundation'}
+        />
+        <NonStretchedImg
+          fluid={data.county.childImageSharp.fluid}
+          alt={'Multnomah County'}
+        />
+        <NonStretchedImg
+          fluid={data.city.childImageSharp.fluid}
+          alt={'City Of Portland'}
+        />
+        <NonStretchedImg
+          fluid={data.moovel.childImageSharp.fluid}
+          alt={'Moovel'}
+        />
+        <NonStretchedImg
+          fluid={data.ocf.childImageSharp.fluid}
+          alt={'Oregon Community Foundation'}
+        />
+        <NonStretchedImg fluid={data.omsi.childImageSharp.fluid} alt={'OMSI'} />
+        <NonStretchedImg fluid={data.att.childImageSharp.fluid} alt={'AT&T'} />
+        <NonStretchedImg
+          fluid={data.mapbox.childImageSharp.fluid}
+          alt={'Mapbox'}
+        />
       </div>
     </div>
   )

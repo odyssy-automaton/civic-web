@@ -187,11 +187,11 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="Footer Block">
+        <footer className="Footer Block">
           <div className="Block__Contents Contain">
-            <h6>© 2019 Civic Software Foundation.</h6>
+            <h6>&copy; 2019 Civic Software Foundation.</h6>
           </div>
-        </div>
+        </footer>
       </Layout>
     )
   }

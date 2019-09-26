@@ -132,11 +132,11 @@ class IndexPage extends React.Component {
               Join us for a live demo, product launch, and annual celebration
               September 11th in Portland, Oregon, at Revolution Hall.
             </p>
-            <ul>
+            <ol className="List">
               <li>5:30 PM: Doors</li>
               <li>6:30 PM: Demo</li>
               <li>8:15 PM: Done</li>
-            </ul>
+            </ol>
             <p>
               <strong>Tickets are free, but sell out fast!</strong>
             </p>

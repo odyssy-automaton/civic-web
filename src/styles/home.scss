@@ -1,273 +1,289 @@
 @import 'variables';
 
 .Hero {
+  width: 100%;
+  position: relative;
+  min-height: 1200px;
+  height: 100vh;
+  margin-top: -120px;
+  height: auto;
+  padding: 0px;
+  @media (max-width: $grid) {
+    margin-top: 0px;
+    margin-bottom: 150px;
+  }
+  .Image {
+    position: absolute;
+    z-index: 0;
     width: 100%;
-    position: relative;
-    min-height: 1200px;
     height: 100vh;
-    margin-top: -120px;
+    top: 0;
+    transform: rotate(45deg);
+    right: 0;
+    background-position: 50% center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 1;
+    @media (max-width: $grid) {
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: $tablet) {
+      background-size: cover;
+      width: 100%;
+      height: 75%;
+    }
+  }
+  &__Contents {
+    position: relative;
+    width: 100%;
     height: auto;
-    padding: 0px;
-    @media (max-width: $grid){
-        margin-top: 0px;
-        margin-bottom: 150px;
-    }
-    .Image {
-        position: absolute;
-        z-index: 0;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        transform: rotate(45deg);
-        right: 0;
-        background-position: 50% center;
-        background-size: contain;
-        background-repeat: no-repeat;
+    .Text--A {
+      position: absolute;
+      max-width: 800px;
+      top: 50%;
+      transform: translate(25%, 25%);
+      left: 100px;
+      z-index: 1;
+      h2 {
+        font-size: 3.25em;
+      }
+      @media (max-width: $grid) {
+        top: 50px;
+        left: 50px;
+        transform: none;
+        max-width: 340px;
+        h5 {
+          font-size: 21px;
+        }
+        h2 {
+          font-size: 32px;
+          margin-bottom: 50px;
+        }
+      }
+      .Circle {
         z-index: -1;
-        opacity: 1;
-        @media (max-width: $grid){
-            background-size: cover;
-            width: 100%;
-            height: 100%;
+        top: 0px;
+        right: -100px;
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+        mix-blend-mode: multiply;
+        overflow: hidden;
+        @media (max-width: $grid) {
+          right: 0px;
+          top: 0px;
+          width: 120px;
+          height: 120px;
         }
-        @media (max-width: $tablet){
-            background-size: cover;
-            width: 100%;
-            height: 75%;
-        }
+      }
     }
-    &__Contents {
+    .Text--B {
+      position: relative;
+      max-width: 420px;
+      top: 10%;
+      left: 10%;
+      transform: translate(50%, 25%);
+      @media (max-width: $grid) {
+        top: 0px;
+        left: 0px;
+        transform: none;
+        max-width: 100%;
+        p {
+          font-size: 21px;
+        }
+      }
+    }
+    .CTA--A {
+      position: absolute;
+      top: 325px;
+      right: -150px;
+      @media (max-width: $grid) {
         position: relative;
-        width: 100%;
-        height: auto;
-        .Text--A {
-            position: absolute;
-            max-width: 800px;
-            top: 50%;
-            transform: translate(25%, 25%);
-            left: 100px;
-            z-index: 1;
-            h2 { font-size: 3.25em;}
-            @media (max-width: $grid){
-                top: 50px;
-                left: 50px;
-                transform: none;
-                max-width: 340px;
-                h5 { font-size: 21px; }
-                h2 {font-size: 32px; margin-bottom: 50px;}
-            }
-            .Circle {
-                z-index: -1;
-                top: 0px;
-                right: -100px;
-                width: 200px;
-                height: 200px;
-                opacity: .0;
-                mix-blend-mode: multiply;
-                overflow: hidden;
-                @media (max-width: $grid) {
-                    right: 0px;
-                    top: 0px;
-                    width: 120px;
-                    height: 120px;
-                }
-            }
-        }
-        .Text--B {
-            position: relative;
-            max-width: 420px;
-            top: 10%;
-            left: 10%;
-            transform: translate(50%, 25%);
-            @media (max-width: $grid){
-                top: 0px;
-                left: 0px;
-                transform: none;
-                max-width: 100%;
-                p {font-size: 21px;}
-            }
-        }
-        .CTA--A {
-            position: absolute;
-            top: 325px;
-            right: -150px;
-            @media (max-width: $grid){
-                position: relative;
-                right: 0px;
-            }
-        }
-        .CTA--B {
-            position: absolute;
-            top: 250px;
-            right: -50px;
-            @media (max-width: $grid){
-                position: relative;
-                right: -50px;
-            }
-        }
+        right: 0px;
+      }
     }
+    .CTA--B {
+      position: absolute;
+      top: 250px;
+      right: -50px;
+      @media (max-width: $grid) {
+        position: relative;
+        right: -50px;
+      }
+    }
+  }
 }
 
 .Quote {
-    margin: 50px 0px 125px;
-    @media (max-width: $grid){
-        margin: 0px;
+  margin: 50px 0px 125px;
+  @media (max-width: $grid) {
+    margin: 0px;
+  }
+  .Block__Contents {
+    max-width: 900px;
+    font-size: 28px;
+    h3 {
+      position: relative;
+      @media (max-width: $tablet) {
+        font-size: 32px;
+      }
+      &:before {
+        content: open-quote;
+        display: block;
+        position: absolute;
+        top: -0px;
+        left: -25px;
+        font-family: 'sofia-pro', sans-serif;
+        font-weight: 900;
+        font-size: 42px;
+        color: #ccc;
+      }
+      &:after {
+        content: close-quote;
+        display: block;
+        position: absolute;
+        bottom: -0px;
+        right: -0px;
+        font-family: 'sofia-pro', sans-serif;
+        font-weight: 900;
+        font-size: 42px;
+        color: #ccc;
+      }
     }
-    .Block__Contents {
-        max-width: 900px;
-        font-size: 28px;
-        h3 {
-            position: relative;
-            @media (max-width: $tablet) {
-                font-size: 32px;
-            }
-            &:before {
-                content: open-quote;
-                display: block;
-                position: absolute;
-                top: -0px;
-                left: -25px;
-                font-family: 'sofia-pro', sans-serif;
-                font-weight: 900;
-                font-size: 42px;
-                color: #ccc;
-            }
-            &:after {
-                content: close-quote;
-                display: block;
-                position: absolute;
-                bottom: -0px;
-                right: -0px;
-                font-family: 'sofia-pro', sans-serif;
-                font-weight: 900;
-                font-size: 42px;
-                color: #ccc;
-            }
-        }
-        .Attribution {
-            font-size: .75em;
-            font-style: italic;
-            color: #ccc;
-        }
+    .Attribution {
+      font-size: 0.75em;
+      font-style: italic;
+      color: #ccc;
     }
+  }
 }
 
 .Volunteers {
-    margin: 75px 0px;
-    @media (max-width: $grid){
-        margin: 0px;
+  margin: 75px 0px;
+  @media (max-width: $grid) {
+    margin: 0px;
+  }
+  img {
+    margin-top: -100px;
+    padding-right: 50px;
+    @media (max-width: $grid) {
+      margin: 0px;
+      padding: 0px;
     }
-    img {
-        margin-top: -100px;
-        padding-right: 50px;
-        @media (max-width: $grid){
-            margin: 0px;
-            padding: 0px;
-        }
+  }
+  .Text {
+    padding-left: 50px;
+    margin-top: 100px;
+    @media (max-width: $grid) {
+      margin: 0px;
+      padding: 0px;
     }
-    .Text {
-        padding-left: 50px;
-        margin-top: 100px;
-        @media (max-width: $grid){
-            margin: 0px;
-            padding: 0px;
-        }
-    }
+  }
 }
 
 .Cities {
-    margin: 125px 0px 25px;
-    @media (max-width: $grid){
-        margin: 0px;
+  margin: 125px 0px 25px;
+  @media (max-width: $grid) {
+    margin: 0px;
+  }
+  .Grid {
+    @media (max-width: $grid) {
+      flex-direction: column-reverse;
     }
-    .Grid {
-        @media (max-width: $grid) {
-            flex-direction: column-reverse;
-        }
+  }
+  img {
+    margin-top: 100px;
+    padding-left: 50px;
+    @media (max-width: $grid) {
+      margin: 0px;
+      padding: 0px;
     }
-    img {
-        margin-top: 100px;
-        padding-left: 50px;
-        @media (max-width: $grid){
-            margin: 0px;
-            padding: 0px;
-        }
+  }
+  .Text {
+    padding-right: 50px;
+    margin-top: -50px;
+    @media (max-width: $grid) {
+      margin: 0px;
+      padding: 0px;
     }
-    .Text {
-        padding-right: 50px;
-        margin-top: -50px;
-        @media (max-width: $grid){
-            margin: 0px;
-            padding: 0px;
-        }
-    }
+  }
 }
 
 .DemoDay {
-    max-width: 720px;
-    margin: 0 auto;
-    position: relative;
-    h2 { 
-        margin-left: -160px; 
-        margin-bottom: 50px;
-        max-width: 600px;
-        @media (max-width: $grid){
-            margin: 0;
-            margin-bottom: 25px;
-            font-size: 36px;
-        }
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  h2 {
+    margin-left: -160px;
+    margin-bottom: 50px;
+    max-width: 600px;
+    @media (max-width: $grid) {
+      margin: 0;
+      margin-bottom: 25px;
+      font-size: 36px;
     }
-    h4 { 
-        margin-top: 80px; margin-bottom: 60px; margin-left: -0px; max-width: 600px; 
-        @media (max-width: $grid){
-            margin: 0;
-            margin-bottom: 25px;
-            margin-top: 100px;
-        }
+  }
+  h4 {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    margin-left: -0px;
+    max-width: 600px;
+    @media (max-width: $grid) {
+      margin: 0;
+      margin-bottom: 25px;
+      margin-top: 100px;
     }
-    ul {
-        list-style-type: none;
-    }
+  }
+  ul {
+    list-style-type: none;
+  }
 }
 
 .Email {
-    @media (max-width: $tablet) {
-        h2 { font-size: 36px; }
+  @media (max-width: $tablet) {
+    h2 {
+      font-size: 36px;
     }
+  }
 }
 
 .Contact {
-    margin: 75px 0px;
-    @media (max-width: $grid){
-        margin: 0px;
+  margin: 75px 0px;
+  @media (max-width: $grid) {
+    margin: 0px;
+  }
+  img {
+    margin-top: -100px;
+    padding-right: 50px;
+    @media (max-width: $grid) {
+      margin: 0px;
+      padding: 0px;
     }
-    img {
-        margin-top: -100px;
-        padding-right: 50px;
-        @media (max-width: $grid){
-            margin: 0px;
-            padding: 0px;
-        }
+  }
+  ul {
+    list-style-type: none;
+  }
+  .Text {
+    padding-left: 50px;
+    margin-top: 100px;
+    @media (max-width: $grid) {
+      margin: 0px;
+      padding: 0px;
     }
-    ul {
-        list-style-type: none;
-    }
-    .Text {
-        padding-left: 50px;
-        margin-top: 100px;
-        @media (max-width: $grid){
-            margin: 0px;
-            padding: 0px;
-        }
-    }
+  }
 }
 
 .Footer {
-    position: relative;
-    background-color: $primary;
-    h6 { color: $tertiary; }
+  position: relative;
+  background-color: $primary;
+  .copyright {
+    color: $tertiary;
+  }
 }
 
 .List {
-    list-style-type: none;
+  list-style-type: none;
 }

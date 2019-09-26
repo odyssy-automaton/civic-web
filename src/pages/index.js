@@ -189,7 +189,9 @@ class IndexPage extends React.Component {
         </div>
         <footer className="Footer Block">
           <div className="Block__Contents Contain">
-            <h6>&copy; 2019 Civic Software Foundation.</h6>
+            <span className="copyright h6">
+              &copy; 2019 Civic Software Foundation.
+            </span>
           </div>
         </footer>
       </Layout>

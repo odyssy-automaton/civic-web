@@ -5,13 +5,14 @@ import Brand from '../../../images/civic-icon.png'
 import './header.scss'
 
 const Header = ({ siteTitle }) => (
-  <div className="Header">
+  <header className="Header">
     <div className="Header__Container">
       <Link className="Header__Container--Brand" to="/">
-        <img src={Brand} alt="Civic Logo" /><span className="BrandName">Civic Software Foundation</span>
+        <img src={Brand} alt="Civic Logo" />
+        <span className="BrandName">Civic Software Foundation</span>
       </Link>
     </div>
-  </div>
+  </header>
 )
 
 export default Header

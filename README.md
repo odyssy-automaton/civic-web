@@ -14,12 +14,11 @@
 
 2.  **Get Dependencies.**
 
-    Yarn is recommended for package management, though feel free to use npm if preferred. 
-    
+    Yarn is recommended for package management, though feel free to use npm if preferred.
+
     Install yarn globally if you haven't already.
     https://yarnpkg.com/en/docs/install
-    
-    
+
     Navigate into the site's directory and download dependencies
 
     ```sh
@@ -27,13 +26,10 @@
     yarn
     ```
 
-
-
-3.  **Start developing.**
+3)  **Start developing.**
 
     Fire it up.
 
     ```sh
-    gatsby develop
+    yarn gatsby develop
     ```
-

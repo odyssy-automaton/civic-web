@@ -2,9 +2,17 @@ import React from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 class Mailchimp extends React.Component {
-  state = {
-    resultMessage: '',
-    error: false,
+  constructor(props) {
+    super(props)
+    this.state = {
+      resultMessage: '',
+      error: false,
+      FNAME: '',
+      LNAME: '',
+      EMAIL: '',
+    }
+
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
 
   handleSubmit = e => {
@@ -15,8 +23,7 @@ class Mailchimp extends React.Component {
       FNAME: formData.get('FNAME'),
       LNAME: formData.get('LNAME'),
     }
-    console.log(email)
-    console.log(fields)
+    console.log(`fields is ${formData.get('EMAIL')}`)
     addToMailchimp(email, fields).then(result => {
       this.setState({
         resultMessage: result.msg.split('<a')[0],
@@ -26,8 +33,22 @@ class Mailchimp extends React.Component {
     })
   }
 
+  handleInputChange(event) {
+    console.log(event)
+    const target = event.target
+    const value = target.value
+    const name = target.name
+
+    this.setState({
+      [name]: value,
+    })
+  }
+
   render() {
     const resultMessage = this.state.error ? 'error-message' : 'success-message'
+    if (this.state.error) {
+      console.log('erroe')
+    }
 
     return (
       <form
@@ -37,32 +58,38 @@ class Mailchimp extends React.Component {
       >
         <div className="formGroup">
           <input
-            autocomplete="given-name"
+            autoComplete="given-name"
             id="fname"
             name="FNAME"
             type="text"
+            value={this.state.FNAME}
+            onChange={this.handleInputChange}
           />
-          <label for="fname">First Name</label>
+          <label htmlFor="fname">First Name</label>
         </div>
         <div className="formGroup">
           <input
-            autocomplete="family-name"
+            autoComplete="family-name"
             id="lname"
             name="LNAME"
             type="text"
+            value={this.state.LNAME}
+            onChange={this.handleInputChange}
           />
-          <label for="lname">Last Name</label>
+          <label htmlFor="lname">Last Name</label>
         </div>
         <div className="formGroup">
           <input
             aria-describedby="email-error"
             aria-required="true"
-            autocomplete="email"
+            autoComplete="email"
             id="email"
             name="EMAIL"
             type="email"
+            value={this.state.EMAIL}
+            onChange={this.handleInputChange}
           />
-          <label for="email">
+          <label htmlFor="email">
             Email Address<span aria-hidden="true"> (required)</span>
           </label>
           <div className="Result">
@@ -71,8 +98,8 @@ class Mailchimp extends React.Component {
             </output>
           </div>
         </div>
-        <button formnovalidate="true" type="submit">
-          Sign up
+        <button formNoValidate type="submit">
+          <span className="buttonText">Sign up</span>
         </button>
       </form>
     )

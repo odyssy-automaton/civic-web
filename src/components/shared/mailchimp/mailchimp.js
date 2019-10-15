@@ -1,109 +1,82 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
-class Mailchimp extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      resultMessage: '',
-      error: false,
-      FNAME: '',
-      LNAME: '',
-      EMAIL: '',
-    }
+function Mailchimp() {
+  const [resultMessage, setResultMessage] = useState('')
+  const [error, setError] = useState(false)
+  const [FNAME, setFNAME] = useState('')
+  const [LNAME, setLNAME] = useState('')
+  const [EMAIL, setEMAIL] = useState('')
 
-    this.handleInputChange = this.handleInputChange.bind(this)
-  }
+  const resultMessageClass = error ? 'error-message' : 'success-message'
 
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault()
-    const formData = new FormData(this.form)
+    const formData = new FormData(e.target)
     const email = formData.get('EMAIL')
     const fields = {
       FNAME: formData.get('FNAME'),
       LNAME: formData.get('LNAME'),
     }
-    console.log(`fields is ${formData.get('EMAIL')}`)
     addToMailchimp(email, fields).then(result => {
-      this.setState({
-        resultMessage: result.msg.split('<a')[0],
-        error: result.result === 'error',
-      })
-      this.form.reset()
+      setResultMessage(result.msg.split('<a')[0])
+      setError(result.result === 'error')
     })
   }
 
-  handleInputChange(event) {
-    console.log(event)
-    const target = event.target
-    const value = target.value
-    const name = target.name
-
-    this.setState({
-      [name]: value,
-    })
-  }
-
-  render() {
-    const resultMessage = this.state.error ? 'error-message' : 'success-message'
-    if (this.state.error) {
-      console.log('erroe')
-    }
-
-    return (
-      <form
-        onSubmit={this.handleSubmit}
-        name="emailForm"
-        ref={el => (this.form = el)}
-      >
-        <div className="formGroup">
-          <input
-            autoComplete="given-name"
-            id="fname"
-            name="FNAME"
-            type="text"
-            value={this.state.FNAME}
-            onChange={this.handleInputChange}
-          />
-          <label htmlFor="fname">First Name</label>
+  return (
+    <form onSubmit={handleSubmit} name="emailForm">
+      <div className="formGroup">
+        <input
+          autoComplete="given-name"
+          id="fname"
+          name="FNAME"
+          type="text"
+          value={FNAME}
+          onChange={event => setFNAME(event.target.value)}
+          className={FNAME.length > 0 ? 'labelAbove' : ''}
+        />
+        <label htmlFor="fname">First Name</label>
+      </div>
+      <div className="formGroup">
+        <input
+          autoComplete="family-name"
+          id="lname"
+          name="LNAME"
+          type="text"
+          value={LNAME}
+          onChange={event => setLNAME(event.target.value)}
+          className={LNAME.length > 0 ? 'labelAbove' : ''}
+        />
+        <label htmlFor="lname">Last Name</label>
+      </div>
+      <div className="formGroup">
+        <input
+          aria-describedby="email-error"
+          aria-required="true"
+          autoComplete="email"
+          aria-invalid={error}
+          id="email"
+          name="EMAIL"
+          type="email"
+          value={EMAIL}
+          onChange={event => setEMAIL(event.target.value)}
+          className={EMAIL.length > 0 ? 'labelAbove' : ''}
+        />
+        <label htmlFor="email">
+          Email Address<span aria-hidden="true"> (required)</span>
+        </label>
+        <div className="Result">
+          <output className={resultMessageClass} id="email-error">
+            {resultMessage}
+          </output>
         </div>
-        <div className="formGroup">
-          <input
-            autoComplete="family-name"
-            id="lname"
-            name="LNAME"
-            type="text"
-            value={this.state.LNAME}
-            onChange={this.handleInputChange}
-          />
-          <label htmlFor="lname">Last Name</label>
-        </div>
-        <div className="formGroup">
-          <input
-            aria-describedby="email-error"
-            aria-required="true"
-            autoComplete="email"
-            id="email"
-            name="EMAIL"
-            type="email"
-            value={this.state.EMAIL}
-            onChange={this.handleInputChange}
-          />
-          <label htmlFor="email">
-            Email Address<span aria-hidden="true"> (required)</span>
-          </label>
-          <div className="Result">
-            <output className={resultMessage} id="email-error">
-              {this.state.resultMessage}
-            </output>
-          </div>
-        </div>
-        <button formNoValidate type="submit">
-          <span className="buttonText">Sign up</span>
-        </button>
-      </form>
-    )
-  }
+      </div>
+      <button className="submitBtn" formNoValidate type="submit">
+        <span className="buttonText">Sign up</span>
+      </button>
+    </form>
+  )
 }
 
 export default Mailchimp

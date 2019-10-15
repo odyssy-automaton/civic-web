@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:100,200,300,400,500,700,900');
-@import url("https://use.typekit.net/ncy1wfw.css");
+@import url('https://use.typekit.net/ncy1wfw.css');
 
 $base-font: 'Rubik', sans-serif;
 $heading-font: 'sofia-pro', sans-serif;
 
 // Color Palette
-$primary: rgba(34,15,37,1);
-$secondary: rgba(237,73,91,1);
-$tertiary: rgba(23,182,169,1);
-$yellow: rgba(255,219,88,1);
+$primary: rgba(34, 15, 37, 1);
+$secondary: rgba(237, 73, 91, 1);
+$tertiary: rgba(23, 182, 169, 1);
+$yellow: rgba(255, 219, 88, 1);
+$formerror: hsl(353, 82%, 50%); /* 4.5:1 ratio per WCAG conformance */
 
 //Media Queries
 $grid: 1200px;

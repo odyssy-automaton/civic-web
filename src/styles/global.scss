@@ -72,14 +72,7 @@ a.button {
   -webkit-appearance: none;
   border: none;
   background: none;
-  outline: none;
   text-decoration: none;
-
-  // underline
-  background-image: linear-gradient(to right, #220f25 50%, transparent 50%);
-  background-position: 0 1.2em;
-  background-repeat: repeat-x;
-  background-size: 6px 3px;
 
   // style
   color: $primary;
@@ -90,6 +83,15 @@ a.button {
   &:hover {
     cursor: pointer;
     pointer-events: all;
+  }
+  & .buttonText {
+    // underline
+    background-image: linear-gradient(to right, #220f25 50%, transparent 50%);
+    background-position: 0 1.2em;
+    background-repeat: repeat-x;
+    background-size: 6px 3px;
+    display: inline-block;
+    height: 50px;
   }
   &:after {
     content: '';
@@ -106,18 +108,11 @@ a.button {
     transition: all 0.15s linear;
     pointer-events: all;
   }
-  &:hover:after {
+  &:hover:after,
+  &:focus:after {
     content: '';
-    text-align: center;
     scale: 1.5;
-    border-radius: 50%;
-    background-color: $yellow;
-    display: block;
-    position: absolute;
-    right: -30px;
-    top: -12px;
-    z-index: -1;
-    pointer-events: all;
+    transform: translateY(0%);
   }
 }
 
@@ -196,14 +191,17 @@ a.button {
 // Forms
 form {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
   @media (max-width: $tablet) {
     flex-direction: column;
-    input {
+    .formGroup {
+      margin-top: 0.5rem;
       width: 100%;
-      margin-bottom: 10px;
+    }
+    .submitBtn {
+      margin-top: 3rem;
     }
     button {
       margin-top: 50px;
@@ -212,19 +210,47 @@ form {
 }
 input {
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid hsl(0, 0%, 58%);
   border-radius: 10px;
   padding: 15px;
+  width: 100%;
+  + label {
+    color: hsl(0, 0%, 46%);
+    transform: translate(0.5rem, 2.4rem);
+    transform-origin: left bottom;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  &:focus + label {
+    color: hsl(0, 0%, 0%);
+    transform: translate(0, -0.1em) scale(0.9);
+  }
+}
+
+input.labelAbove + label {
+  color: hsl(0, 0%, 0%);
+  transform: translate(0, -0.1em) scale(0.9);
+}
+
+.formGroup {
+  display: flex;
+  flex-flow: column-reverse;
+  position: relative;
   width: 30%;
 }
 
+.submitBtn {
+  align-self: center;
+  height: 1.5rem;
+  margin-top: 1.5rem;
+}
+
 .Result {
-  display: block;
-  clear: both;
-  flex-basis: 100%;
-  padding-top: 15px;
-  p {
+  // padding-top: 0.833333333rem;
+  position: absolute;
+  transform: translateY(2rem);
+  output {
     font-size: 1rem;
-    color: $secondary;
+    color: $formerror;
   }
 }

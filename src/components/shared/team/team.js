@@ -128,9 +128,9 @@ export default ({ showTitle = true }) => {
   return (
     <div className="TeamContainer">
       {showTitle && (
-        <p className="TeamText">
+        <h3 className="TeamText">
           <strong>Team</strong>
-        </p>
+        </h3>
       )}
       <div className="Team">
         {team.map(member => (

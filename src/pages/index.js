@@ -121,36 +121,6 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="DemoDay Block" id="demoday">
-          <div className="Block__Contents Contain">
-            <h2>See the action live on Demo Day</h2>
-            <p>
-              CIVIC teams are working to debut a set of exciting new projects on
-              these themes: elections, disaster, education, housing,
-              transportation, and sandbox.
-            </p>
-            <p>
-              Join us for a live demo, product launch, and annual celebration
-              September 11th in Portland, Oregon, at Revolution Hall.
-            </p>
-            <ol className="List">
-              <li>5:30 PM: Doors</li>
-              <li>6:30 PM: Demo</li>
-              <li>8:15 PM: Done</li>
-            </ol>
-            <p>
-              <strong>Tickets are free, but sell out fast!</strong>
-            </p>
-            <TicketsForm />
-            <Logos />
-            <h4>Here’s a sneak peek inside the sprint toward Demo Day.</h4>
-            <Video
-              videoSrcURL="https://www.youtube.com/embed/2-czlCAceZo"
-              videoTitle="2019 Civic Demo Day Hype"
-            />
-            <Team />
-          </div>
-        </div>
         <div className="Email Block" id="signup">
           <div className="Block__Contents Contain">
             <h2>Let's be email friends</h2>
@@ -158,7 +128,10 @@ class IndexPage extends React.Component {
             <Mailchimp />
           </div>
         </div>
-        <div className="Content" id="contact">
+        <div className="DemoDay Block" id="team">
+          <Team />
+        </div>
+        <div className="DemoDay Block" id="contact">
           <div className="Block__Contents Contain">
             <div className="Grid">
               <div className="Grid__Column--50 Text">

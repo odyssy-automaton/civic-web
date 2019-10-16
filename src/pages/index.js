@@ -4,6 +4,7 @@ import Layout from '../components/layout/layout'
 import Mailchimp from '../components/shared/mailchimp/mailchimp'
 import Video from '../components/shared/video/video'
 import Logos from '../components/shared/logos/logos'
+import Team from '../components/shared/team/team'
 import dataFlower from '../images/hero__data-flower-venn-circle.png'
 import humanGrid1 from '../images/human-grid-test.png'
 import humanGrid2 from '../images/human-grid-test2.png'
@@ -147,6 +148,7 @@ class IndexPage extends React.Component {
               videoSrcURL="https://www.youtube.com/embed/2-czlCAceZo"
               videoTitle="2019 Civic Demo Day Hype"
             />
+            <Team />
           </div>
         </div>
         <div className="Email Block" id="signup">

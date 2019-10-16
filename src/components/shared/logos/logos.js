@@ -33,7 +33,7 @@ export const squareImage = graphql`
 
 export default ({ showTitle = true }) => {
   const data = useStaticQuery(graphql`
-    query ImageQuery {
+    query LogoImageQuery {
       moovel: file(relativePath: { eq: "logos/moovel.png" }) {
         ...squareImage
       }

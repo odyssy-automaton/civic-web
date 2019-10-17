@@ -58,14 +58,14 @@ class IndexPage extends React.Component {
                   </strong>
                 </p>
                 <div className="CTA--A">
-                  <Link className="button" to="#volunteers">
+                  <a className="button" href="#volunteers">
                     Build with us
-                  </Link>
+                  </a>
                 </div>
                 <div className="CTA--B">
-                  <Link className="button" to="#cities">
+                  <a className="button" href="#cities">
                     Partner with us
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

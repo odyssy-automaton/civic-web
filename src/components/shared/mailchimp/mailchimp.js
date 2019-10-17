@@ -12,11 +12,10 @@ function Mailchimp() {
 
   const handleSubmit = e => {
     e.preventDefault()
-    const formData = new FormData(e.target)
-    const email = formData.get('EMAIL')
+    const email = EMAIL
     const fields = {
-      FNAME: formData.get('FNAME'),
-      LNAME: formData.get('LNAME'),
+      FNAME: FNAME,
+      LNAME: LNAME,
     }
     addToMailchimp(email, fields).then(result => {
       setResultMessage(result.msg.split('<a')[0])

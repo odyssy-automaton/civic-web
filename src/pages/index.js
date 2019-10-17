@@ -141,23 +141,25 @@ class IndexPage extends React.Component {
                 </a>
                 <br />
                 <br />
-                <div className="Grid__Column--50 Text">
-                  <h5>Creative and Tech HQ</h5>
-                  <ul className="List">
-                    <li>Portland, OR</li>
-                    <li>
-                      <a href="tel:5033839131">+1-503-383-9131‬</a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="Grid__Column--50 Text">
-                  <h5>Business HQ</h5>
-                  <ul className="List">
-                    <li>Washington, DC</li>
-                    <li>
-                      <a href="tel:12026641223">+1-202-664-1223</a>
-                    </li>
-                  </ul>
+                <div className="ContactLocations">
+                  <div>
+                    <h5>Creative + Tech HQ</h5>
+                    <ul className="List">
+                      <li>Portland, OR</li>
+                      <li>
+                        <a href="tel:5033839131">+1-503-383-9131‬</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5>Business + Gov HQ</h5>
+                    <ul className="List">
+                      <li>Washington, DC</li>
+                      <li>
+                        <a href="tel:12026641223">+1-202-664-1223</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

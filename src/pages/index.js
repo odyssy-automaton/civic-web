@@ -8,6 +8,7 @@ import Team from '../components/shared/team/team'
 import dataFlower from '../images/hero__data-flower-venn-circle.png'
 import humanGrid1 from '../images/human-grid-test.png'
 import humanGrid2 from '../images/human-grid-test2.png'
+import team from '../images/team/team.jpg'
 import VolunteerForm from '../components/shared/typeform/volunteer-form'
 import PartnerForm from '../components/shared/typeform/partner-form'
 import TicketsForm from '../components/shared/typeform/tickets-form'
@@ -128,8 +129,19 @@ class IndexPage extends React.Component {
             <Mailchimp />
           </div>
         </div>
-        <div className="DemoDay Block" id="team">
-          <Team />
+        <div className="Block Volunteers" id="team">
+          <div className="Block__Contents Contain">
+            <div className="Grid">
+              <div className="Grid__Column--50">
+                <p>
+                  <img src={team} alt="team photo" />
+                </p>
+              </div>
+              <div className="Grid__Column--50 Text">
+                <Team />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="DemoDay Block" id="contact">
           <div className="Block__Contents Contain">

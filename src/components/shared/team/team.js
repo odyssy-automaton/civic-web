@@ -11,6 +11,11 @@ const team = [
     title: 'Executive Director',
   },
   {
+    emailPrefix: 'dwayne',
+    name: 'Dwayne Johnson',
+    title: 'Deputy Director',
+  },
+  {
     emailPrefix: 'michael',
     name: 'Michael Lange',
     title: 'Chief Technology Officer',
@@ -21,16 +26,6 @@ const team = [
     title: 'Creative Director',
   },
   {
-    emailPrefix: 'dwayne',
-    name: 'Dwayne Johnson',
-    title: 'Deputy Director',
-  },
-  {
-    emailPrefix: 'dianna',
-    name: 'Dianna Faulk',
-    title: 'Participatory Design Engineer',
-  },
-  {
     emailPrefix: 'ashley',
     name: 'Ashley Kennedy',
     title: 'Director of Partnerships',
@@ -39,6 +34,16 @@ const team = [
     emailPrefix: 'amy',
     name: 'Amy Thebarge',
     title: 'Director of Event Production',
+  },
+  {
+    emailPrefix: 'dianna',
+    name: 'Dianna Faulk',
+    title: 'Participatory Design Engineer',
+  },
+  {
+    emailPrefix: 'rachael',
+    name: 'Rachael Haigh',
+    title: 'Grant Coordinator',
   },
 ]
 
@@ -120,6 +125,11 @@ export default ({ showTitle = true }) => {
       }
       amy: file(
         relativePath: { eq: "team/amy@civicsoftwarefoundation.org.jpg" }
+      ) {
+        ...squareImage
+      }
+      rachael: file(
+        relativePath: { eq: "team/rachael@civicsoftwarefoundation.org.jpg" }
       ) {
         ...squareImage
       }

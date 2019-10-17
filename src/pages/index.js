@@ -134,21 +134,23 @@ class IndexPage extends React.Component {
         <div className="DemoDay Block" id="contact">
           <div className="Block__Contents Contain">
             <div className="Grid">
-              <div className="Grid__Column--50 Text">
+              <div className="Grid__Column--100 Text">
                 <h3>Contact</h3>
                 <a href="mailto:hi@civicsoftwarefoundation.org">
                   hi@civicsoftwarefoundation.org
                 </a>
                 <br />
                 <br />
-                <h5>Creative and Tech HQ</h5>
-                <ul className="List">
-                  <li>Portland, OR</li>
-                  <li>
-                    <a href="tel:5033839131">+1-503-383-9131‬</a>
-                  </li>
-                </ul>
-                <div>
+                <div className="Grid__Column--50 Text">
+                  <h5>Creative and Tech HQ</h5>
+                  <ul className="List">
+                    <li>Portland, OR</li>
+                    <li>
+                      <a href="tel:5033839131">+1-503-383-9131‬</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="Grid__Column--50 Text">
                   <h5>Business HQ</h5>
                   <ul className="List">
                     <li>Washington, DC</li>
@@ -158,7 +160,6 @@ class IndexPage extends React.Component {
                   </ul>
                 </div>
               </div>
-              <div className="Grid__Column--50 Text"></div>
             </div>
           </div>
         </div>

@@ -276,6 +276,12 @@
   }
 }
 
+.ContactLocations {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 1.5em;
+}
+
 .Footer {
   position: relative;
   background-color: $primary;

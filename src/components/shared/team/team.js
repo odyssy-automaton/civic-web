@@ -9,21 +9,24 @@ const team = [
     emailPrefix: 'cat',
     name: 'Catherine Nikolovski',
     title: 'Executive Director',
-  },
-  {
-    emailPrefix: 'dwayne',
-    name: 'Dwayne Johnson',
-    title: 'Deputy Director',
+    pictured: true,
   },
   {
     emailPrefix: 'michael',
     name: 'Michael Lange',
     title: 'Chief Technology Officer',
+    pictured: true,
   },
   {
     emailPrefix: 'jaron',
     name: 'Jaron Heard',
     title: 'Creative Director',
+    pictured: true,
+  },
+  {
+    emailPrefix: 'dwayne',
+    name: 'Dwayne Johnson',
+    title: 'Deputy Director',
   },
   {
     emailPrefix: 'ashley',
@@ -44,6 +47,11 @@ const team = [
     emailPrefix: 'rachael',
     name: 'Rachael Haigh',
     title: 'Grant Coordinator',
+  },
+  {
+    emailPrefix: 'nathan',
+    name: 'Nathan Miller',
+    title: 'Executive Producer, CIVIC Sandbox',
   },
 ]
 
@@ -79,6 +87,22 @@ const TeamMember = props => {
   )
 }
 
+const TeamMemberText = props => {
+  return (
+    <div className="TeamMember">
+      <a
+        href={`mailto:${props.member.emailPrefix}@civicsoftwarefoundation.org`}
+      >
+        <strong>{props.member.name}</strong>
+      </a>
+      <div>
+        <small>{props.member.title}</small>
+      </div>
+      {props.member.pictured ? <div>📸</div> : null}
+    </div>
+  )
+}
+
 export const squareImage = graphql`
   fragment squareImage on File {
     childImageSharp {
@@ -93,44 +117,7 @@ export const squareImage = graphql`
 export default ({ showTitle = true }) => {
   const data = useStaticQuery(graphql`
     query TeamImageQuery {
-      cat: file(
-        relativePath: { eq: "team/cat@civicsoftwarefoundation.org.jpg" }
-      ) {
-        ...squareImage
-      }
-      michael: file(
-        relativePath: { eq: "team/michael@civicsoftwarefoundation.org.jpg" }
-      ) {
-        ...squareImage
-      }
-      jaron: file(
-        relativePath: { eq: "team/jaron@civicsoftwarefoundation.org.jpg" }
-      ) {
-        ...squareImage
-      }
-      dwayne: file(
-        relativePath: { eq: "team/dwayne@civicsoftwarefoundation.org.jpg" }
-      ) {
-        ...squareImage
-      }
-      dianna: file(
-        relativePath: { eq: "team/dianna@civicsoftwarefoundation.org.jpg" }
-      ) {
-        ...squareImage
-      }
-      ashley: file(
-        relativePath: { eq: "team/ashley@civicsoftwarefoundation.org.jpg" }
-      ) {
-        ...squareImage
-      }
-      amy: file(
-        relativePath: { eq: "team/amy@civicsoftwarefoundation.org.jpg" }
-      ) {
-        ...squareImage
-      }
-      rachael: file(
-        relativePath: { eq: "team/rachael@civicsoftwarefoundation.org.jpg" }
-      ) {
+      team: file(relativePath: { eq: "team/team.jpg" }) {
         ...squareImage
       }
     }
@@ -144,10 +131,7 @@ export default ({ showTitle = true }) => {
       )}
       <div className="Team">
         {team.map(member => (
-          <TeamMember
-            member={member}
-            fluid={data[member.emailPrefix].childImageSharp.fluid}
-          />
+          <TeamMemberText member={member} />
         ))}
       </div>
     </div>

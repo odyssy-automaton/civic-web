@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
                 <p>
                   Cities have some of the world’s most valuable data. The
                   problem? It’s raw, nearly indecipherable, and hardly utilized.
-                  But, it’s our data. The CIVIC Method is built on the belief
+                  The CIVIC Method is built on the belief
                   that cities can become the leaders of the next generation of
                   innovators.
                 </p>
